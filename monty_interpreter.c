@@ -50,7 +50,7 @@ void opcode_pall(stack_t **head, unsigned int c)
 	stack_t *current;
 	(void)c;
 
-	current =*head;
+	current = *head;
 
 	while (current)
 	{
@@ -133,7 +133,7 @@ void opcode_swap(stack_t **head, unsigned int c)
 
 	buf = (*head)->next;
 	(*head)->next = buf->next;
-	
+
 	if (buf->next != NULL)
 		buf->next->prev = *head;
 	buf->prev = NULL;
