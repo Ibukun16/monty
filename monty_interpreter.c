@@ -47,10 +47,12 @@ void opcode_push(stack_t **head, unsigned int c)
  */
 void opcode_pall(stack_t **head, unsigned int c)
 {
-	stack_t *current = *head;
+	stack_t *current;
 	(void)c;
 
-	while (current != NULL)
+	current =*head;
+
+	while (current)
 	{
 		printf("%d\n", current->n);
 		current = current->next;
